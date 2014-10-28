@@ -1,0 +1,7 @@
+/.idea
+/frameworks/js-bindings
+/frameworks/runtime-src
+/runtime
+/tools
+.DS_Store
+CMakeLists.txt
