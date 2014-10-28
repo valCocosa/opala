@@ -17,10 +17,10 @@ var PlayScene = cc.Scene.extend({
         this.space.addStaticShape(wallBottom);
 
         // setup chipmunk CollisionHandler
-        this.space.addCollisionHandler(SpriteTag.runner, SpriteTag.coin,
-            this.collisionCoinBegin.bind(this), null, null, null);
-        this.space.addCollisionHandler(SpriteTag.runner, SpriteTag.rock,
-            this.collisionRockBegin.bind(this), null, null, null);
+        // this.space.addCollisionHandler(SpriteTag.runner, SpriteTag.coin,
+        //     this.collisionCoinBegin.bind(this), null, null, null);
+        // this.space.addCollisionHandler(SpriteTag.runner, SpriteTag.rock,
+        //     this.collisionRockBegin.bind(this), null, null, null);
     },
 
     collisionCoinBegin:function (arbiter, space) {
@@ -34,15 +34,15 @@ var PlayScene = cc.Scene.extend({
         statusLayer.addCoin(1);
     },
 
-    collisionRockBegin:function (arbiter, space) {
-        cc.log("==game over");
+//     collisionRockBegin:function (arbiter, space) {
+//         cc.log("==game over");
 
-        //stop bg music
-//        cc.audioEngine.stopMusic();
+//         //stop bg music
+// //        cc.audioEngine.stopMusic();
 
-        cc.director.pause();
-        this.addChild(new GameOverLayer());
-    },
+//         cc.director.pause();
+//         this.addChild(new GameOverLayer());
+//     },
 
     onEnter:function () {
         this._super();
